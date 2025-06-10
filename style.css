@@ -46,6 +46,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+* {
+  box-sizing: border-box;
+}
+body{
+	background-color: #FBFBFB;
+}
+img{
+	vertical-align: middle;
+}
 /* 台頭 */
 .mean{
 	max-width: 100%;
@@ -60,7 +70,7 @@ table {
 }
 .mean p{
 	font-weight: bold;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 	color: #000000;
 }
 /* 主題 */
@@ -102,12 +112,11 @@ table {
 	margin-bottom: 15px;
 	margin-left: 30px;
 	font-weight: bold;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+	font-family: "Noto Sans TC", sans-serif;}
 .pic2 p{
 	margin-left: 30px;
 	font-weight: bold;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;	
 	color: #0000ff;
 	position: relative;
 }
@@ -121,6 +130,7 @@ table {
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
+	/* box-sizing: border-box; */
 }
 .introduce-yourself-card .move{
 	margin-left: 30px;
@@ -128,7 +138,7 @@ table {
 }
 .introduce-yourself-card p{
 	font-size: 16px;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 }
 .introduce-first{
 	margin-top: 15px;
@@ -159,13 +169,20 @@ table {
 		margin-bottom: 80px;
 		height:850px;
 	}
-	.introduce-yourself {
+	.introduce-yourself-card {
+		max-width: 90%;
+		width: 100%;
+		height: auto;
+		background-color: #ffffff;
+		position: absolute;
+		bottom: -70px;
+		right: 5%;
 		display: flex;
 		flex-direction: column;
-		height:auto;
-		margin-bottom: 30px;
-		height: 800px;
+		justify-content: center;
+		padding: 20px;
 	}
+
 	.pic1,.pic2{
 		width: 100%;
 		height: 400px;
@@ -199,7 +216,7 @@ h2{
 	font-size: 30px;
 	font-weight: bold;
 	margin-bottom: 20px;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 }
 .fourcard{
 	display: flex;
@@ -262,12 +279,12 @@ h2{
 	margin-left: 20px;
 	margin-right: 20px;
 	line-height: 1.2;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 }
 h3{
 	font-size: 20px;
 	font-weight: bold;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;	
 	margin-bottom: 10px;
 	margin-left: 20px;
 }
@@ -281,7 +298,7 @@ h3{
 	font-size: 20px;
 	font-weight: bold;
 	margin-right: 10px;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 }
 .connect a{
 	margin-right: 10px;
@@ -290,9 +307,14 @@ h3{
 	border: #000000 solid 1px;
 	border-radius: 100%;
 }
+.connect a:hover{
+	background-color: #4F4F4F;
+	color:#ffffff
+}
 .connect a p{
   margin: 5px;
 }
+
 @media (max-width: 768px) {
 	.services{
 		max-width:80%;
@@ -362,7 +384,10 @@ h3{
 	font-weight: bold;
 	color: #ffffff;
 	background-color: #0072E3;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
+}
+.arrow-left a:hover{
+	background-color: #4F4F4F;
 }
 .arrow-right a{
 	padding: 10px;
@@ -371,7 +396,10 @@ h3{
 	font-weight: bold;
 	color: #ffffff;
 	background-color: #0000ff;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
+}
+.arrow-right a:hover{
+	background-color: #4F4F4F;
 }
 .content-inside{
 	width: 300px;
@@ -392,20 +420,20 @@ h3{
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-size: 12px;
-	font-family:Arial, Helvetica, sans-serif
+	font-family: "Noto Sans TC", sans-serif;
 }
 .content-inside .heshitag{
 	margin-bottom: 10px;
 }
 .content-inside .heshitag a{
 	font-size: 14px;
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;	
 	color:#0000ff;
 	text-decoration: none;
 }
 .content-title{
 	font-size: 16px;
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 	font-weight:bold;
 	line-height: 1.3;
 	margin-bottom: 8px;
@@ -501,19 +529,24 @@ h3{
 	position: relative;
 	margin-bottom: 30px;
 }
-.imgbox{
-	width:550px;
-	height: 425px;
-	background-color: #E0E0E0;
-	display:flex;
-	justify-content: center;
-	align-items: center;
+.imgbox {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    aspect-ratio: 4/3;
+    background-color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.imgbox img{
-	aspect-ratio: 4/3;
-	object-fit: cover;
-	object-position: center;
-	width:500px;
+
+.imgbox img {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center;
 }
 .mission{
 	width: 400px;
@@ -545,7 +578,7 @@ h3{
     margin-left: 20px;
     margin-right: 20px;
     line-height: 1.2;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 }
 .consult span{
 	color:#0000ff
@@ -563,10 +596,15 @@ h3{
 	font-size: 12px;
 	padding:8px;
 }
+.consult a:hover{
+	color:#ffffff;
+	background-color: #4F4F4F;
+	border:#4F4F4F solid 1.5px;
+}
 @media (max-width: 768px) {
 	.mission,.mission-right{
 		position:static;
-		width: 550px;
+		width: 90%;
 	}
 }
 /* 很多人 */
@@ -588,7 +626,7 @@ h3{
 .person p{
 	font-size: 20px;
 	font-weight: bold;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 }
 .person ul{
 	margin-left: 15px;
@@ -613,6 +651,11 @@ h3{
 	color:#6C6C6C;
 	padding:8px;
 	font-size: 12px;
+}
+.listen-podcast a:hover{
+	color:#ffffff;
+	background-color: #4F4F4F;
+	border:#4F4F4F solid 1.5px;
 }
 @media (max-width: 768px){
 	.people-column{
@@ -702,6 +745,11 @@ input{
 	padding:8px;
 	font-size: 12px;
 }
+.subscription a:hover{
+	background-color:#4F4F4F;
+	color: #E0E0E0;
+	border:#4F4F4F solid 1px;
+}
 @media (max-width: 768px){
 	.Newsletter {
 		display: flex;
@@ -738,16 +786,19 @@ input{
 }
 .content-text p{
 	margin-left: 5px;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 }
 .content-text-exp{
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;	
 	text-decoration:underline;
 }
 .arrow a{
 	text-decoration: none;
 	color: #6C6C6C;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
+}
+.arrow a:hover{
+	color:#0000ff;
 }
 /* 著作權 */
 .Copyright {
